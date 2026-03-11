@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+echo '** Starting dccifd **'
+set -f
+exec s6-setuidgid dcc /usr/libexec/dccifd ${DCCIFD_ARGS}
